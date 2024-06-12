@@ -1,0 +1,53 @@
+// Import variables and fonts
+
+@import "./fonts.scss";
+@import "./variables.scss";
+@import "~styles/buttons.scss";
+@import "~styles/tippy.scss";
+@import "~styles/checkboxes.scss";
+@import "~styles/dark.scss";
+@import "~styles/common.scss";
+@import "hereticjsorg.scss";
+
+// Template-related styles
+
+[data-color-scheme="dark"] {
+    color-scheme: dark;
+}
+
+[data-color-scheme="light"] {
+    color-scheme: light;
+}
+
+.hr-wrap {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.hr-content {
+    flex: 1;
+}
+
+.hr-footer {
+    font-size: 80%;
+}
+
+.hr-navbar-wrap {
+    user-select: none;
+}
+
+.icon>svg path {
+    fill: $grey-darker;
+}
+
+.navbar-brand>* {
+    background-color: transparent !important;
+}
+
+@media (max-width: 1023px) {
+    .hr-navbar-wrap {
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+}

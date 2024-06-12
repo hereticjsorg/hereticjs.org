@@ -1,0 +1,12 @@
+import { mdiContentCopy, } from '@mdi/js'
+
+<if(process.browser)>
+    <if(input.dir)>
+        $ const dirArr = input.dir.split(/\//);
+        <div class="tag is-size-7 hr-docs-code-dir">${input.dir.split(/\//).map((i, ix) => ix === dirArr.length - 1 ? `<strong>${i}</strong>` : i).join("/")}</div>
+    </if>
+    <pre class=`hr-docs-pre mb-${input.m || "4"}`><div class="hr-docs-code-copy" on-click("onCopyClick")><span class="icon hr-docs-icon"><svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d=mdiContentCopy/></svg></span></div><code class=`language-${input.language}`>$!{Prism.highlight(input.code, Prism.languages[input.language], input.language)}</code></pre>
+</if>
+<else>
+    <pre><code>${input.code.replace(/\n/gm, "")}</code></pre>
+</else>

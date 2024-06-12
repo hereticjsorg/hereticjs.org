@@ -1,0 +1,61 @@
+[{
+        "title": "General"
+    },
+    {
+        "area": "introduction",
+        "label": "Introduction"
+    }, {
+        "area": "gettingStarted",
+        "label": "Getting Started"
+    }, {
+        "area": "configurationFiles",
+        "label": "Configuration Files"
+    }, {
+        "area": "consoleClient",
+        "label": "Console Client"
+    }, {
+        "area": "rateLimiting",
+        "label": "Rate Limiting"
+    }, {
+        "area": "serverDeployment",
+        "label": "Server Deployment"
+    }, {
+        "title": "Development"
+    }, {
+        "area": "creatingModules",
+        "label": "Creating Modules"
+    }, {
+        "area": "devTutorial",
+        "label": "Development Tutorial"
+    },
+    {
+        "area": "components",
+        "label": "Components",
+        "static": true,
+        "subMenu": [{
+            "area": "componentFormBuilder",
+            "label": "Form Builder"
+        }, {
+            "area": "componentTableBuilder",
+            "label": "Table Builder"
+        }, {
+            "area": "componentRouter",
+            "label": "Router"
+        }, {
+            "area": "componentModalDialog",
+            "label": "Modal Dialog"
+        }, {
+            "area": "componentsOther",
+            "label": "Other Components"
+        }]
+    }, {
+        "area": "i18n",
+        "label": "Internationalization"
+    }, {
+        "area": "apiModules",
+        "label": "API Modules"
+    }, {
+        "area": "librariesAndHelpers",
+        "label": "Libraries and Helpers"
+    }
+]

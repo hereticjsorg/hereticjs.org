@@ -1,0 +1,22 @@
+@import "~view/variables.scss";
+
+.hr-techs-wrap {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.hr-tech-img {
+    padding: 10px;
+}
+
+.hr-tech-img-node {
+    height: 70px;
+}
+
+.hr-tech-img-marko,
+.hr-tech-img-mongo,
+.hr-tech-img-fastify {
+    height: 60px;
+}

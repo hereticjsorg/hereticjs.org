@@ -1,0 +1,25 @@
+import imgNodeLight from "../images/nodejs-light.svg"
+import imgMarkoLight from "../images/marko-light.svg"
+import imgFastifyLight from "../images/fastify-light.svg"
+import imgMongoLight from "../images/mongo-light.svg"
+import imgNodeDark from "../images/nodejs-dark.svg"
+import imgMarkoDark from "../images/marko-dark.svg"
+import imgFastifyDark from "../images/fastify-dark.svg"
+import imgMongoDark from "../images/mongo-dark.svg"
+
+<div class="hr-techs-wrap">
+    <div class="columns is-gapless is-centered is-multiline is-mobile">
+        <div class="column is-narrow">
+            <img src=(state.darkMode ? imgNodeDark : imgNodeLight) class="hr-tech-img hr-tech-img-node"/>
+        </div>
+        <div class="column is-narrow">
+            <img src=(state.darkMode ? imgMarkoDark : imgMarkoLight) class="hr-tech-img hr-tech-img-marko"/>
+        </div>
+        <div class="column is-narrow">
+            <img src=(state.darkMode ? imgFastifyDark : imgFastifyLight) class="hr-tech-img hr-tech-img-fastify"/>
+        </div>
+        <div class="column is-narrow">
+            <img src=(state.darkMode ? imgMongoDark : imgMongoLight) class="hr-tech-img hr-tech-img-mongo"/>
+        </div>
+    </div>
+</div>

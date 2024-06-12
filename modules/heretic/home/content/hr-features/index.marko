@@ -1,0 +1,30 @@
+import { mdiLanguageJavascript, mdiNetworkPos, mdiCameraMeteringPartial } from "@mdi/js"
+
+<macro|{ title, text, icon }| name="feature">
+    <div class="hr-feature-title">
+        <div class="columns is-mobile">
+            <div class="column">
+                <span class="icon hr-home-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d=icon/>
+                    </svg>
+                </span>
+            </div>
+            <div class="column is-narrow">${title}</div>
+        </div>
+    </div>
+    <div class="hr-feature-text">${text}</div>
+</macro>
+<div class="hr-features">
+    <div class="columns hr-feature-columns">
+        <div class="column hr-feature-column p-0">
+            <feature title="JavaScript & Open Source" text=`Heretic is developed in modern JavaScript, both client-side and server-side. It is open source and is based on the open source technologies, libraries and frameworks, licensed under MIT license. This means that you are free to use it in both open source and commercial projects and modify the source code according to you needs. Marko, Bulma and Fastify – projects on which Heretic is based – are well tested and being widely used in production. Heretic uses MongoDB as a database engine and Redis as a caching helper, but both components are optional and you may disable this functionality when not needed.` icon=mdiLanguageJavascript/>
+        </div>
+        <div class="column hr-feature-column p-0">
+            <feature title="SSR + SPA" text=`Heretic is based on Marko, a declarative, HTML-based language. Also "under the hood" there are: FastiHeretic pre-renders the page contents on the server side, then performs so called "rehydration", e.g. activating browser interactive elements. This is useful because the search systems will be able to cache the page contents correctly. At the same time, there is no need to reload the whole page while browsing, required chunks only will be loaded from server on demand. This improves the render speed and doesn't force the user to wait for the whole page to reload.` icon=mdiNetworkPos/>
+        </div>
+        <div class="column hr-feature-column p-0">
+            <feature title="Components + Modules" text=`The framework contains a lot of components that allow you to solve a large number of tasks related to module development. Available components: admin panel, form builder, dynamic table, routing, WYSIWYG editor, calendar, modal dialog, load spinner and many more. Heretic included built-in authentication and authorization system. You can control users via the administration panel, turn on or off website sign in and sign up, define password policy, allow users to restore passwords by e-mail. There is an option to enable protection via built-in captcha and flexible rate limiting. OAuth2 providers are supported for both sign in and sign up.` icon=mdiCameraMeteringPartial/>
+        </div>
+    </div>
+</div>

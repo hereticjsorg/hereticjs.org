@@ -1,0 +1,32 @@
+@import "~view/variables.scss";
+
+html.theme-dark .hr-navbar-icon svg>path {
+    fill: $theme-dark-text-color !important;
+}
+
+.hr-navbar-icon {
+    display: inline-flex;
+    align-self: center;
+}
+
+.hr-navbar-icon svg {
+    height: 20px;
+    width: 20px;
+    top: 0px;
+    position: relative;
+}
+
+html.theme-light .navbar-burger {
+    color: $black-ter !important;
+}
+
+html.theme-dark .navbar-burger {
+    color: $white-ter !important;
+}
+
+.hr-navbar-item {
+    margin: 1px;
+    border-radius: $radius;
+}
+
+@import "navbar-hereticjsorg.scss";

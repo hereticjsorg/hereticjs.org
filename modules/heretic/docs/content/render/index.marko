@@ -1,0 +1,41 @@
+$ const dataTypes = input.data.map(i => i.type);
+<div on-click("onClick")>
+    <for|item, index| of=input.data>
+        <if(item.type === "header")>
+            <docHeader level=item.level m=item.margin>$!{item.content}</docHeader>
+        </if>
+        <if(item.type === "paragraph")>
+            $ var itemMargin = item.margin;
+            $ if (!itemMargin) {
+                if (index === dataTypes.length - 1) {
+                    itemMargin = "0";
+                } else if (dataTypes[index + 1] === "paragraph") {
+                    itemMargin = "2";
+                } else {
+                    itemMargin = "4";
+                }
+            }
+            <docParagraph m=itemMargin>$!{item.content}</docParagraph>
+        </if>
+        <if(item.type === "code")>
+            $ var itemMargin = index === dataTypes.length - 1 ? "0" : "4";
+            <docCode code=item.content dir=item.dir language=item.language m=itemMargin/>
+        </if>
+        <if(item.type === "table")>
+            $ var itemMargin = index === dataTypes.length - 1 ? "0" : "4";
+            <docTable data=item.content m=itemMargin/>
+        </if>
+        <if(item.type === "list")>
+            $ var itemMargin = index === dataTypes.length - 1 ? "0" : "4";
+            <docList data=item.content m=itemMargin/>
+        </if>
+        <if(item.type === "image")>
+            $ var itemMargin = index === dataTypes.length - 1 ? "0" : "4";
+            <docImage src=item.src m=itemMargin/>
+        </if>
+        <if(item.type === "warning" || item.type === "info")>
+            $ var itemMargin = index === dataTypes.length - 1 ? "0" : "4";
+            <docMessage m=itemMargin type=item.type>$!{item.content}</docMessage>
+        </if>
+    </for>
+</div>

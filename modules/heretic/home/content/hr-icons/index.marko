@@ -1,0 +1,40 @@
+import { mdiLanguageJavascript, mdiTranslateVariant, mdiViewModuleOutline, mdiWallFire, mdiCameraMeteringPartial, mdiAccountLockOutline, mdiCodeBlockTags, mdiDocker } from '@mdi/js'
+
+<macro|{ icon, label }| name="icon">
+    <div class="hr-icons-icon-wrap" data-aos="zoom-in-up" data-aos-delay="150">
+        <span class="hr-icons-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path d=icon/>
+            </svg>
+        </span>
+    </div>
+    <div class="has-text-centered is-size-7 hr-icons-text">${label}</div>
+</macro>
+<div class="hr-icons-wrap">
+    <div class="columns is-multiline is-mobile is-centered">
+        <div class="column is-narrow">
+            <icon icon=mdiLanguageJavascript label="JavaScript"/>
+        </div>
+        <div class="column is-narrow">
+            <icon icon=mdiTranslateVariant label="i18n"/>
+        </div>
+        <div class="column is-narrow">
+            <icon icon=mdiViewModuleOutline label="Modularity"/>
+        </div>
+        <div class="column is-narrow">
+            <icon icon=mdiWallFire label="Rate Limiting"/>
+        </div>
+        <div class="column is-narrow">
+            <icon icon=mdiCameraMeteringPartial label="Components"/>
+        </div>
+        <div class="column is-narrow">
+            <icon icon=mdiAccountLockOutline label="Admin Panel"/>
+        </div>
+        <div class="column is-narrow">
+            <icon icon=mdiCodeBlockTags label="Editor"/>
+        </div>
+        <div class="column is-narrow">
+            <icon icon=mdiDocker label="Docker"/>
+        </div>
+    </div>
+</div>

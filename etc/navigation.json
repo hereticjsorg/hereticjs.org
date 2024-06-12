@@ -1,0 +1,11 @@
+{
+    "userspace": {
+        "home": "heretic_home",
+        "routes": [
+            "heretic_home",
+            "heretic_docs",
+            "heretic_license"
+        ]
+    },
+    "admin": []
+}

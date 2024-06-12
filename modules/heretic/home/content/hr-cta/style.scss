@@ -1,0 +1,13 @@
+@import "~view/variables.scss";
+
+.hr-cta-wrap {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.hr-cta-btn-shadow {
+    box-shadow: rgba(50, 50, 93, .25) 0 8px 15px -5px, rgba(0, 0, 0, .3)0 8px 8px -8px !important;
+    border-radius: $radius-large;
+}

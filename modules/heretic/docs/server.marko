@@ -1,0 +1,62 @@
+import areasData from "../data/areas.json"
+import introduction from "./content/generated/introduction/index.marko"
+import gettingStarted from "./content/generated/gettingStarted/index.marko"
+import configurationFiles from "./content/generated/configurationFiles/index.marko"
+import consoleClient from "./content/generated/consoleClient/index.marko"
+import rateLimiting from "./content/generated/rateLimiting/index.marko"
+import serverDeployment from "./content/generated/serverDeployment/index.marko"
+import creatingModules from "./content/generated/creatingModules/index.marko"
+import devTutorial from "./content/generated/devTutorial/index.marko"
+import componentFormBuilder from "./content/generated/componentFormBuilder/index.marko"
+import componentTableBuilder from "./content/generated/componentTableBuilder/index.marko"
+import componentRouter from "./content/generated/componentRouter/index.marko"
+import componentModalDialog from "./content/generated/componentModalDialog/index.marko"
+import componentsOther from "./content/generated/componentsOther/index.marko"
+import components from "./content/generated/components/index.marko"
+import i18n from "./content/generated/i18n/index.marko"
+import apiModules from "./content/generated/apiModules/index.marko"
+import librariesAndHelpers from "./content/generated/librariesAndHelpers/index.marko"
+
+$ {
+    const areas = [];
+    areasData.map(i => {
+        if (i.subMenu) {
+            i.subMenu.map(si => areas.push(si.area));
+        }
+        if (i.area) {
+            areas.push(i.area);
+        }
+    });
+}
+<view>
+    <content/>
+    <if(out.global.queryString && out.global.queryString.area && areas.indexOf(out.global.queryString.area) >= 0)>
+        <div style={
+            width: "1px",
+            height: "1px",
+            position: "absolute",
+            opacity: "0",
+            left: "-9999px",
+            top: "-9999px",
+            overflow: "hidden"
+        }>
+            <${out.global.queryString.area === "introduction" ? introduction : ""}/>
+            <${out.global.queryString.area === "gettingStarted" ? gettingStarted : ""}/>
+            <${out.global.queryString.area === "configurationFiles" ? configurationFiles : ""}/>
+            <${out.global.queryString.area === "consoleClient" ? consoleClient : ""}/>
+            <${out.global.queryString.area === "rateLimiting" ? rateLimiting : ""}/>
+            <${out.global.queryString.area === "serverDeployment" ? serverDeployment : ""}/>
+            <${out.global.queryString.area === "creatingModules" ? creatingModules : ""}/>
+            <${out.global.queryString.area === "devTutorial" ? devTutorial : ""}/>
+            <${out.global.queryString.area === "componentFormBuilder" ? componentFormBuilder : ""}/>
+            <${out.global.queryString.area === "componentTableBuilder" ? componentTableBuilder : ""}/>
+            <${out.global.queryString.area === "componentRouter" ? componentRouter : ""}/>
+            <${out.global.queryString.area === "componentModalDialog" ? componentModalDialog : ""}/>
+            <${out.global.queryString.area === "componentsOther" ? componentsOther : ""}/>
+            <${out.global.queryString.area === "components" ? components : ""}/>
+            <${out.global.queryString.area === "i18n" ? i18n : ""}/>
+            <${out.global.queryString.area === "apiModules" ? apiModules : ""}/>
+            <${out.global.queryString.area === "librariesAndHelpers" ? librariesAndHelpers : ""}/>
+        </div>
+    </if>
+</view>

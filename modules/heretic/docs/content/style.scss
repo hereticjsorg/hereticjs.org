@@ -1,0 +1,190 @@
+@import "~view/variables.scss";
+@import "./prism.scss";
+
+.theme-dark strong {
+    color: var(--bulma-text);
+}
+
+#hr_docs_menu_dummy {
+    position: absolute;
+    top: -70px;
+}
+
+.hr-docs-menu-wrap {
+    user-select: none;
+    scrollbar-width: thin;
+    scrollbar-color: $grey-light transparent;
+    padding-right: 10px;
+
+}
+
+.hr-docs-menu-list {
+    z-index: 1;
+    position: relative;
+}
+
+html.theme-dark .hr-docs-menu-wrap {
+    scrollbar-color: $grey-dark transparent;
+}
+
+.hr-docs-menu-wrap::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.hr-docs-menu-wrap::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.hr-docs-menu-wrap::-webkit-scrollbar-thumb {
+    background-color: $grey-light;
+    background-clip: padding-box;
+    border: 0 solid transparent;
+    border-radius: 16px;
+}
+
+html.theme-dark .hr-docs-menu-wrap::-webkit-scrollbar-thumb {
+    background-color: $grey-dark;
+}
+
+.menu-list a:not(:hover):not(.is-active) {
+    background: transparent !important;
+}
+
+html:not(.theme-dark) .menu-list a:hover:not(.is-active) {
+    background: $white-bis !important;
+}
+
+.hr-docs-ul {
+    margin-left: 1em;
+}
+
+.hr-docs-ul>li::before {
+    display: inline-block;
+    content: "–";
+    width: 1em;
+    margin-left: -1em;
+}
+
+.hr-docs-pre {
+    border-radius: $radius-large;
+    word-break: break-word;
+    overflow-x: auto !important;
+    box-shadow: hsla(0, 0%, 0%, 0.16) 0px 1px 4px;
+    position: relative;
+}
+
+.hr-docs-pre>code {
+    display: block;
+    max-width: 50px;
+}
+
+html.theme-dark .hr-docs-pre {
+    background: $grey-dark;
+}
+
+.hr-docs-table {
+    border-radius: $radius-large;
+    background: hsl(240, 10%, 96%) !important;
+    box-shadow: hsla(0, 0%, 0%, 0.16) 0px 1px 4px;
+}
+
+html.theme-dark .hr-docs-table {
+    background: hsl(222, 14%, 29%) !important;
+}
+
+html.theme-light .token.operator,
+html.theme-dark .token.operator {
+    background: transparent !important;
+}
+
+html.theme-dark code[class*=language-],
+html.theme-dark pre[class*=language-] {
+    text-shadow: 0 .1em .1em rgba(0, 0, 0, 0.3);
+}
+
+.hr-docs-columns-wrap {
+    position: relative;
+}
+
+.hr-docs-columns-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($background, 70%);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+html.theme-dark .hr-docs-columns-loading {
+    background-color: rgba($hr-dark-background, 70%);
+}
+
+.hr-docs-message>.message-body,
+.hr-docs-image {
+    border-radius: $radius-large !important;
+    box-shadow: hsla(0, 0%, 0%, 0.16) 0px 1px 4px;
+}
+
+.hr-docs-code-copy {
+    width: 32px;
+    height: 32px;
+    background-color: rgba($black, 10%);
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    top: 5px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hr-docs-icon {
+    display: inline-flex;
+    align-self: center;
+}
+
+.hr-docs-icon svg {
+    height: 17px;
+    width: 17px;
+    top: 0;
+    left: 1px;
+    position: relative;
+}
+
+html.theme-dark .hr-docs-icon svg>path {
+    fill: $grey-light !important;
+}
+
+.hr-docs-code-dir {
+    padding-bottom: 17px;
+    padding-top: 10px;
+    margin-left: 9px;
+    margin-bottom: -4px;
+}
+
+@media (min-width: 769px) {}
+
+@media (max-width: 768px) {
+    .hr-docs-menu-wrap {
+        padding: 10px;
+        border-radius: $radius;
+    }
+
+    html.theme-light .hr-docs-menu-wrap {
+        background-color: $white-bis;
+    }
+
+    html.theme-dark .hr-docs-menu-wrap {
+        border: 1px solid $grey-dark;
+    }
+
+    .hr-docs-menu-wrap {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 1023px) {}

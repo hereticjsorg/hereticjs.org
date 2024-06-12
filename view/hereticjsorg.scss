@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+html,
+body {
+    background-color: $background;
+}
+
+.hr-content {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.hr-navbar-wrap {
+    box-shadow: 0 1px 0 rgba(17,17,26,.05),0 0 8px rgba(17,17,26,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.theme-dark .hr-navbar-wrap {
+    background: $hr-navbar-dark-background !important;
+}
+
+.theme-light .hr-navbar-wrap {
+    user-select: none;
+    background-color: $white;
+}
+
+.label {
+    font-size: 1em;
+}
+
+.hr-footer {
+    background-color: $white-ter;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+html.theme-dark .hr-footer {
+    background-color: $black-ter;
+}

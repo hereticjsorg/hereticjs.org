@@ -1,0 +1,16 @@
+<table class=`table hr-docs-table mb-${input.m || "4"}`>
+    <thead>
+        <tr>
+            <th>Option</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <for|i| of=input.data>
+            <tr>
+                <td>$!{i.option}</td>
+                <td>$!{i.description}</td>
+            </tr>
+        </for>
+    </tbody>
+</table>

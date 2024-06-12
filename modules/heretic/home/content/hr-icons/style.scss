@@ -1,0 +1,41 @@
+@import "~view/variables.scss";
+
+.hr-icons-wrap {
+    margin-bottom: 60px;
+}
+
+.hr-icons-icon-wrap {
+    display: flex;
+    justify-content: center;
+    background: lighten($grey-lighter, 2%);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.theme-dark .hr-icons-icon-wrap {
+    background: lighten($grey-darker, 2%);
+}
+
+.hr-icons-icon {
+    display: inline-flex;
+    align-self: center;
+}
+
+.hr-icons-icon svg {
+    height: 45px;
+    width: 45px;
+    top: 0;
+    position: relative;
+}
+
+.theme-light .hr-icons-icon>svg>path {
+    fill: $grey-dark !important;
+}
+
+.theme-dark .hr-icons-icon>svg>path {
+    fill: $grey !important;
+}
+
+.hr-icons-text {
+    margin-top: 5px;
+}
