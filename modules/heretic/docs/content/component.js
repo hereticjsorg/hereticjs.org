@@ -1,4 +1,7 @@
-// import debounce from "lodash/debounce";
+import Prism from "prismjs";
+import "prismjs/plugins/custom-class/prism-custom-class";
+import "prismjs/plugins/line-numbers/prism-line-numbers";
+import "prismjs/plugins/line-highlight/prism-line-highlight";
 import Utils from "#lib/componentUtils";
 import Query from "#lib/queryBrowser";
 import pageConfig from "../page.js";
@@ -71,6 +74,7 @@ export default class {
         try {
             const areaComponent = (await Loader.loadArea(id)).default;
             this.setState("areaComponent", areaComponent);
+            window.dispatchEvent(new CustomEvent("hrdprism"));
         } catch (err) {
             window.dispatchEvent(new CustomEvent("hrpanicmode", {
                 detail: {
@@ -121,6 +125,9 @@ export default class {
         });
         window.addEventListener("hrdclick", this.onComponentClick.bind(this));
         window.addEventListener("hrdnotify", this.onComponentNotify.bind(this));
+        window.addEventListener("hrdprism", () => {
+            setTimeout(() => Prism.highlightAll());
+        });
         window.history.replaceState({
             area,
         }, document.title, `${pageConfig.url}?area=${area}`);
@@ -135,6 +142,11 @@ export default class {
         }));
         this.sideMenuToggle();
         setTimeout(() => this.sideMenuToggleBound());
+        Prism.plugins.customClass.map({
+            number: "prism-number",
+            tag: "prism-tag"
+        });
+        window.dispatchEvent(new CustomEvent("hrdprism"));
     }
 
     async onDocsMenuClick(e) {

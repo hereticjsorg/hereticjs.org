@@ -19,7 +19,7 @@ $ const dataTypes = input.data.map(i => i.type);
         </if>
         <if(item.type === "code")>
             $ var itemMargin = index === dataTypes.length - 1 ? "0" : "4";
-            <docCode code=item.content dir=item.dir language=item.language m=itemMargin/>
+            <docCode code=item.content dir=item.dir language=item.language m=itemMargin highlight=item.highlight/>
         </if>
         <if(item.type === "table")>
             $ var itemMargin = index === dataTypes.length - 1 ? "0" : "4";

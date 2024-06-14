@@ -28,6 +28,7 @@ export default [{
     }, {
         type: "code",
         language: "js",
+        dir: "site/modules/example/module.js",
         content: `const id = "example";
 
 module.exports = {
@@ -327,6 +328,7 @@ export default fastify => {
     {
         type: "code",
         language: "js",
+        highlight: "29-46",
         dir: "site/modules/example/page1/content/component.js",
         content: `import axios from "axios";
 import pageConfig from "../page.js";

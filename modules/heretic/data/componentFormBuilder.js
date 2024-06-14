@@ -15,12 +15,12 @@ export default [{
         type: "code",
         language: "html",
         content: `<hform
-        key="exampleForm"
-        id="exampleForm"
-        data=formData
-        on-button-click("onFormButtonClick")
-        on-form-submit("onFormSubmit")
-        on-mount-complete("onFormMountComplete")/>`,
+    key="exampleForm"
+    id="exampleForm"
+    data=formData
+    on-button-click("onFormButtonClick")
+    on-form-submit("onFormSubmit")
+    on-mount-complete("onFormMountComplete")/>`,
     },
     {
         type: "header",

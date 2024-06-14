@@ -1,8 +1,12 @@
 @import "~view/variables.scss";
-@import "./prism.scss";
+@import "./prism.scss"; 
 
 .theme-dark strong {
     color: var(--bulma-text);
+}
+
+.hr-docs-pre-wrap {
+    position: relative;
 }
 
 #hr_docs_menu_dummy {
