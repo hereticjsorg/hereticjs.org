@@ -107,7 +107,7 @@ export default [{
     },
     {
         type: "paragraph",
-        content: "Then, you will need to install the required NPM modules and start the build process:",
+        content: "Then, you will need to go to heretic directory, install the required NPM modules and start the build process:",
     },
     {
         type: "code",
