@@ -266,7 +266,7 @@ export default class {
         language: "js",
         dir: "site/modules/example/api/index.js",
         content: `import moduleConfig from "../module";
-import apiExample from "./apiExample;
+import apiExample from "./apiExample";
     
 export default fastify => {
     fastify.post(\`/api/\${moduleConfig.id}/endpoint\`, apiExample());
@@ -358,7 +358,7 @@ export default class {
         this.setState("ready", true);
     }
 
-    onMyButtonClick(e) {
+    async onMyButtonClick(e) {
         e.preventDefault();
         try {
             const {
@@ -371,7 +371,7 @@ export default class {
             });
             // eslint-disable-next-line no-console
             console.log(data);
-        } catch(e) {
+        } catch (error) {
             // eslint-disable-next-line no-console
             console.error(e);
         }
